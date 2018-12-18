@@ -1,0 +1,15 @@
+mat-card {
+  height: 55vh;
+  overflow: scroll;
+
+  mat-list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    mat-list-item-content {
+      width: 100%;
+    }
+  }
+
+}

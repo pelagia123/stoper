@@ -1,0 +1,24 @@
+<mat-card>
+  <h2 class="{{paused ? 'blink' : ''}}">{{timePassed | time}}</h2>
+  <div class="control__buttons">
+    <button
+      mat-raised-button
+      matTooltip="Stoper zaczyna odliczać od 0"
+      color="accent"
+      [disabled]="timerRunning"
+      (click)="start()"
+    >Start</button>
+    <button
+      mat-raised-button
+      (click)="measurement()"
+    >Pomiar</button>
+    <button
+      mat-raised-button
+      (click)="reset()"
+    >Zeruj</button>
+    <button
+      mat-raised-button
+      (click)="timerRunning ? pause() : resume()"
+    >{{timerRunning ? 'Wstrzymaj' : 'Wznów'}}</button>
+  </div>
+</mat-card>
